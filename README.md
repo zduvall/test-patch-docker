@@ -33,9 +33,9 @@ I have a 2020 MacBook Pro and noticed this problem before and after upgrading Ma
 | Docker Desktop | 3.26.0 & 4.24.0                                         |
 | Docker Engine  | (earlier-version) & 24.0.6                              |
 | Docker Compose | (earlier-version) & v2.22.0-desktop.2                   |
+| Python Image   | python:3.11.1-slim-buster & python:3.11.5-slim-bullseye |
 | Uvicorn        | 0.17.6 & 0.23.2                                         |
 | FastAPI        | 0.82.0 & 0.103.2                                        |
-| Python Image   | python:3.11.1-slim-buster & python:3.11.5-slim-bullseye |
 
 Lastly, if I install the same Uvicorn and FastAPI versions outside of docker and run:
 
