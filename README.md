@@ -25,7 +25,7 @@ test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 
 Reproduced in multiple browsers and Postman
 
-I have a 2020 MacBook Pro and noticed this problem before and after upgrading MacOS (timing by chance). Also in an effort to address it, I upgraded Docker, Uvicorn and FastApi. I don't remember the specific versions I had of Docker Engine and Compose previously, but here's the software I've reproduced this on otherwise:
+I have a 2020 MacBook Pro and noticed this problem before and after upgrading MacOS (timing by chance). Also in an effort to address it, I upgraded Docker, Uvicorn and FastAPI. I don't remember the specific versions I had of Docker Engine and Compose previously, but here's the software I've reproduced this on otherwise:
 
 | Software       | Versions                              |
 | -------------- | ------------------------------------- |
@@ -34,4 +34,12 @@ I have a 2020 MacBook Pro and noticed this problem before and after upgrading Ma
 | Docker Engine  | (earlier-version) & 24.0.6            |
 | Docker Compose | (earlier-version) & v2.22.0-desktop.2 |
 | Uvicorn        | 0.17.6 & 0.23.2                       |
-| FastApi        | 0.82.0 & 0.103.2                      |
+| FastAPI        | 0.82.0 & 0.103.2                      |
+
+Lastly, if I install the same Uvicorn and FastAPI versions outside of docker and run:
+
+- `$ uvicorn main:app --reload`
+
+...All methods' responses show up as expected when tested, including patch
+
+Any suggestions???
