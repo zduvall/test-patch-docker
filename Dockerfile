@@ -1,7 +1,7 @@
 
 FROM python:3.11.5-slim-bullseye
 
-EXPOSE 8080
+EXPOSE 8000
 
 WORKDIR /app
 
