@@ -25,7 +25,7 @@ test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 
 Reproduced in multiple browsers and Postman
 
-I have a 2020 MacBook Pro and noticed this problem before and after upgrading MacOS (timing by chance). Also in an effort to address it, I upgraded Docker, Uvicorn and FastAPI. I don't remember the specific versions I had of Docker Engine and Compose previously, but here's the software I've reproduced this on otherwise:
+I have a 2020 MacBook Pro and noticed this problem before and after upgrading MacOS (timing by chance). Also in an effort to address it, I upgraded Docker, Uvicorn and FastAPI and tried a different python image. I don't remember the specific versions I had of Docker Engine and Compose previously, but here's the software I've reproduced this on otherwise:
 
 | Software       | Versions                                                |
 | -------------- | ------------------------------------------------------- |
