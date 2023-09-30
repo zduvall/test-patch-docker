@@ -27,14 +27,15 @@ Reproduced in multiple browsers and Postman
 
 I have a 2020 MacBook Pro and noticed this problem before and after upgrading MacOS (timing by chance). Also in an effort to address it, I upgraded Docker, Uvicorn and FastAPI. I don't remember the specific versions I had of Docker Engine and Compose previously, but here's the software I've reproduced this on otherwise:
 
-| Software       | Versions                              |
-| -------------- | ------------------------------------- |
-| MacOS          | Ventura 13.0 & OS Sonoma 14.0         |
-| Docker Desktop | 3.26.0 & 4.24.0                       |
-| Docker Engine  | (earlier-version) & 24.0.6            |
-| Docker Compose | (earlier-version) & v2.22.0-desktop.2 |
-| Uvicorn        | 0.17.6 & 0.23.2                       |
-| FastAPI        | 0.82.0 & 0.103.2                      |
+| Software       | Versions                                                |
+| -------------- | ------------------------------------------------------- |
+| MacOS          | Ventura 13.0 & OS Sonoma 14.0                           |
+| Docker Desktop | 3.26.0 & 4.24.0                                         |
+| Docker Engine  | (earlier-version) & 24.0.6                              |
+| Docker Compose | (earlier-version) & v2.22.0-desktop.2                   |
+| Uvicorn        | 0.17.6 & 0.23.2                                         |
+| FastAPI        | 0.82.0 & 0.103.2                                        |
+| Python Image   | python:3.11.1-slim-buster & python:3.11.5-slim-bullseye |
 
 Lastly, if I install the same Uvicorn and FastAPI versions outside of docker and run:
 
