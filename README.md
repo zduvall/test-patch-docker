@@ -1,4 +1,4 @@
-# Problem with `PATCH` + docker
+# Problem with response from `PATCH` request + docker
 
 I noticed recently that responses from any `PATCH` requests sent to my `FastAPI` / `Uvicorn` backend in a docker container no longer make it to the client.
 
