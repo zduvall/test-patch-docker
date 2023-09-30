@@ -21,7 +21,7 @@ test-patch-docker ... "HEAD / HTTP/1.1" 200 OK
 test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 ```
 
-- The response from the `patch` request never makes it to the client while all others do
+- The response from the `PATCH` request never makes it to the client while all others do
 
 Reproduced in multiple browsers and Postman
 
@@ -40,6 +40,6 @@ Lastly, if I install the same Uvicorn and FastAPI versions outside of docker and
 
 - `$ uvicorn main:app --reload`
 
-...All methods' responses show up as expected when tested, including patch
+...All methods' responses show up as expected when tested, including `PATCH`
 
 Any suggestions???
