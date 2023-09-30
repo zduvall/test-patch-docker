@@ -1,23 +1,32 @@
 ### Update:
+
 _Fixed, but still curious why the problem happened..._
 
 I found that the problem (described below) was resolved when I didn't specify a port, rather just used the default 8000 from Uvicorn. Here are the changes to the docker setup.
 
-Dockerfile
+`Dockerfile`
 
+```
 ...
 EXPOSE 8000
 ...
-docker-compose.yml
+```
 
+`docker-compose.yml`
+
+```
     ...
     command: uvicorn main:app --host 0.0.0.0 --reload
     ...
     ports:
       - 8000:8000
+```
+
 I'm still curious if anyone can explain why specifying the port causes the response to the patch response (and no others) to get stuck?
 
 You can still reproduce it using the code from this repo if you want to check it out. Feel free to respond here or on [stack overflow](https://stackoverflow.com/questions/77206343/response-from-patch-request-in-a-docker-container-never-making-it-to-the-clien).
+
+---
 
 # Problem with response from `PATCH` request + docker
 
