@@ -8,7 +8,7 @@ Steps to reproduce:
   - `$ docker compose up`
 
 - Send requests to `http://0.0.0.0:8000/` for all methods in `main.py`
-- All will show 200 resopnse in terminal...
+- All will show 200 resopnse in terminal (including `PATCH`)...
 
 ```
 test-patch-docker ... "GET / HTTP/1.1" 200 OK
@@ -21,7 +21,7 @@ test-patch-docker ... "HEAD / HTTP/1.1" 200 OK
 test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 ```
 
-- The response from the `PATCH` request never makes it to the client while all others do
+- However, the response from the `PATCH` request never makes it to the client while all others do
 
 Reproduced in multiple browsers and Postman
 
