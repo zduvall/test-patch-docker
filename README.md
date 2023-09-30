@@ -2,7 +2,7 @@
 
 I noticed recently that responses from any `PATCH` requests sent to my `FastAPI` / `Uvicorn` backend in a docker container no longer make it to the client.
 
-Steps to reproduce:
+## Steps to reproduce
 
 - In this directory, run:
 
@@ -39,10 +39,12 @@ I have a 2020 MacBook Pro and noticed this problem before and after upgrading Ma
 | Uvicorn        | 0.17.6 & 0.23.2                                         |
 | FastAPI        | 0.82.0 & 0.103.2                                        |
 
-Lastly, if I install the same Uvicorn and FastAPI versions outside of docker and run:
+## Contrast with
+
+If I install the same Uvicorn and FastAPI versions outside of docker and run:
 
 - `$ uvicorn main:app --reload`
 
 ...All methods' responses show up as expected when tested, including `PATCH`
 
-Any suggestions???
+## Any suggestions???
