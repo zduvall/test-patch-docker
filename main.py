@@ -5,27 +5,27 @@ app = FastAPI()
 
 @app.get("/")
 async def get():
-    return {"message": "get"}
+    return {"method": "get"}
 
 
 @app.post("/")
 async def post():
-    return {"message": "post"}
+    return {"method": "post"}
 
 
 @app.put("/")
 async def put():
-    return {"message": "put"}
+    return {"method": "put"}
 
 
 @app.patch("/")
 async def patch():
-    return {"message": "patch"}
+    return {"method": "patch"}
 
 
 @app.delete("/")
 async def delete():
-    return {"message": "delete"}
+    return {"method": "delete"}
 
 
 @app.head("/")
@@ -35,4 +35,4 @@ async def head():
 
 @app.options("/")
 async def options():
-    return {"message": "options"}
+    return {"method": "options"}
