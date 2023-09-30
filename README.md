@@ -23,7 +23,14 @@ test-patch-docker ... "HEAD / HTTP/1.1" 200 OK
 test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 ```
 
-- However, the response from the `PATCH` request never makes it to the client while all others do
+- However, the response from the `PATCH` request never makes it to the client while all others do.
+- This means, in the browser, it becomes an promise that never resolves (tried using axios and fetch apis, each with `async/await` and `.then`). The network response, just stays empty:
+
+![Alt text](chrome-network-tab.png)
+
+- In postman, it gets stuck on the loading screen
+
+![Alt text](postman.png)
 
 Reproduced in multiple browsers and Postman
 
@@ -38,6 +45,8 @@ I have a 2020 MacBook Pro and noticed this problem before and after upgrading Ma
 | Python Image   | python:3.11.1-slim-buster & python:3.11.5-slim-bullseye |
 | Uvicorn        | 0.17.6 & 0.23.2                                         |
 | FastAPI        | 0.82.0 & 0.103.2                                        |
+
+I've also tried it with and without CORS middleware (as permissive as possible)
 
 ## Contrast with
 
