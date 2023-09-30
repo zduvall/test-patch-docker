@@ -1,7 +1,2 @@
-*
-
-!Dockerfile
-!docker-compose.yml
-!.gitignore
-!main.py
-!README.md
+__pycache__
+.vscode
