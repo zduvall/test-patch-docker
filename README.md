@@ -21,7 +21,7 @@ test-patch-docker ... "HEAD / HTTP/1.1" 200 OK
 test-patch-docker ... "OPTIONS / HTTP/1.1" 200 OK
 ```
 
-- ...however the response from the `patch` request alone never makes it to the client
+- The response from the `patch` request never makes it to the client while all others do
 
 Reproduced in multiple browsers and Postman
 
