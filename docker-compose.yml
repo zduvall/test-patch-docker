@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: test-patch-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --reload --port 8080
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
