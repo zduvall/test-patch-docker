@@ -1,6 +1,7 @@
 *
 
 !Dockerfile
-!main.py
 !docker-compose.yml
 !.gitignore
+!main.py
+!README.md
